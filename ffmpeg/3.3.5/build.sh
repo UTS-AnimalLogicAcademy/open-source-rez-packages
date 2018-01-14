@@ -1,0 +1,17 @@
+#! /bin/bash
+
+export PACKAGE_INSTALLATION_ROOT=~/packages
+export PACKAGE_NAME=ffmpeg
+export PACKAGE_VERSION=3.3.5
+export MAKE_THREADS=28
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd FFmpeg-n3.3.5
+./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION --enable-shared --cc="gcc -m64 -fPIC"
+make -j$MAKE_THREADS
+make install -j$MAKE_THREADS
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+
