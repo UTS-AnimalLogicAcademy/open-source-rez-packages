@@ -25,4 +25,4 @@ If the rpm/system package doesn't work for you (i.e. older distro build), you ca
  1. Run setup.sh
  2. Set the pacakge installation options in build.sh
  3. Run build.sh
- 4. Test via rez-env oiio-1.8.5
+ 4. Test via rez-env pyside-1.5.8
