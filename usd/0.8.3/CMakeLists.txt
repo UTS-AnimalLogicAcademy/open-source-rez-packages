@@ -50,5 +50,11 @@ set_option(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
 
 set_option(PXR_BUILD_ALEMBIC_PLUGIN ON)
 
-set_option(PXR_BUILD_DOCUMENTATION ON)
+set_option(MAYA_BASE_DIR $ENV{MAYA_BASE_DIR})
+set_option(MAYA_LOCATION $ENV{MAYA_BASE_DIR})
+set_option(MAYA_tbb_LIBRARY $ENV{REZ_TBB_ROOT}/lib/intel64/gcc4.4/libtbb.so)
+set_option(PXR_BUILD_MAYA_PLUGIN ON)
+
+
+#set_option(PXR_BUILD_DOCUMENTATION ON)
 add_subdirectory("USD-0.8.3")
