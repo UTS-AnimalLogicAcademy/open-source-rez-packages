@@ -20,4 +20,5 @@ def commands():
     env.MAYA_SHELF_PATH.append("{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/")
     env.MAYA_PLUG_IN_PATH.append("{this.root}/third_party/maya/plugin")
     env.XBMLANGPATH.append("{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/")
-    
+    env.MAYA_VP2_DEVICE_OVERRIDE.set("VirtualDeviceGL")
+    env.MAYA_VP2_USE_VP1_SELECTION.set(1)
