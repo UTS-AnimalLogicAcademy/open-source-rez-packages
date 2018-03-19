@@ -13,8 +13,8 @@ build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'houdini-16.0.557'],
-            ['platform-linux', 'arch-x86_64', 'houdini-16.0.736'],
+#            ['platform-linux', 'arch-x86_64', 'houdini-16.0.557'], deprecated build
+#            ['platform-linux', 'arch-x86_64', 'houdini-16.0.736'], deprecated build
             ['platform-linux', 'arch-x86_64', 'houdini-16.5.268'],
             ['platform-linux', 'arch-x86_64', 'houdini-16.5.405']
 #            ['platform-linux', 'arch-x86_64', 'houdini-16.5.268'] $ 16.5 has build issues...maybe not supported yet?
