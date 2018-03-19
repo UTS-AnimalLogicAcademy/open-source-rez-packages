@@ -25,3 +25,5 @@ def commands():
     env.HOUDINI_DSO_PATH.append('@/plugin:&')
     env.HOUDINI_SCRIPT_PATH.append('@/scripts:%s/third_party/houdini/lib:&' % env.REZ_USD_HOUDINI_ROOT)
     env.HOUDINI_PYTHON_LIB.set('/lib64/libpython2.7.so')
+    env.HOUDINI_OTLSCAN_PATH.append('%s/third_party/houdini/otls' % env.REZ_USD_HOUDINI_ROOT)
+
