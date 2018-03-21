@@ -2,7 +2,7 @@
 
 name = 'al_usdmaya'
 
-version = '0.25.0'
+version = '0.26.0'
 
 requires = [
     'qt-5.6'
@@ -11,7 +11,7 @@ requires = [
 build_requires = ['cmake-3.2']
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.3'],
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.3']
            ]
 
 def commands():
