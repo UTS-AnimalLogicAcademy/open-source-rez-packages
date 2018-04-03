@@ -2,7 +2,7 @@
 
 name = 'usd_maya'
 
-version = '0.8.4'
+version = '0.8.4.001'
 
 requires = [
     'usd-0.8.4'
