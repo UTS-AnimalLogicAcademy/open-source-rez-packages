@@ -22,4 +22,4 @@ pybind11-2.2.1
 *.tgz
 *.zip
 */0.8.*/USD-0.8.*/
-
+/AL_USDMaya/*/AL_USDMaya*/
