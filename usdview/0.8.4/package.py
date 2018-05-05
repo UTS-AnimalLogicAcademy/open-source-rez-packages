@@ -12,4 +12,4 @@ requires = [
 ]
 
 def commands():
-    env.DEFAULT_USD.set('{root}/bin')
+    env.DEFAULT_USD.set('{root}/bin/DefaultUSD.usda')
