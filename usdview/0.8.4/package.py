@@ -2,7 +2,7 @@
 
 name = 'usdview'
 
-version = '0.8.4.001'
+version = '0.8.4.002'
 
 requires = [
     'pyside-1.2',
@@ -11,3 +11,5 @@ requires = [
     'ala_usd_resolver'
 ]
 
+def commands():
+    env.DEFAULT_USD.set('{root}/bin/DefaultUSD.usda')
