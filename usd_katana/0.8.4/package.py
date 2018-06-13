@@ -3,7 +3,7 @@
 name = 'usd_katana'
 
 # this is an internal ALA version, which we deploy anytime we have to rebuild new variants of dcc plugins:
-version = '0.8.4.001'
+version = '0.8.4.002'
 
 # this is the vanilla USD version, which you'll want to use:
 #version = '0.8.4'
@@ -19,7 +19,7 @@ build_requires = [
 
 variants = [
             ['platform-linux', 'arch-x86_64', 'katana-2.6.4'],
-            ['platform-linux', 'arch-x86_64', 'katana-3.0.1.010026b']
+            ['platform-linux', 'arch-x86_64', 'katana-3.0.1.2']
            ]
 
 
