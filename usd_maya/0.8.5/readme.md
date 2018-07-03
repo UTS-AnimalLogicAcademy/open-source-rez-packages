@@ -1,4 +1,4 @@
-This will download, build, and create a [rez](http://nerdvegas.github.io/rez/) package for usd_maya 0.8.4 on linux
+This will download, build, and create a [rez](http://nerdvegas.github.io/rez/) package for usd_maya 0.8.5 on linux
 
 Tested on RedHat 3.10.0-693.11.1.el7.x86_64
 
@@ -6,8 +6,9 @@ Tested on RedHat 3.10.0-693.11.1.el7.x86_64
 
 **rez packages:**
 
- - usd-0.8.4
+ - usd-0.8.5
  - maya-2017
+ - PyOpenGL-3 (discoverable by mayapy)
 
 ## Building
 
