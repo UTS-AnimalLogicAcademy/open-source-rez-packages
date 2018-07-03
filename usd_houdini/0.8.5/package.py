@@ -14,10 +14,10 @@ build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'houdini-16.5.268']
-#            ['platform-linux', 'arch-x86_64', 'houdini-16.5.405'],
-#            ['platform-linux', 'arch-x86_64', 'houdini-16.5.405.001'],
-#            ['platform-linux', 'arch-x86_64', 'houdini-16.5.405.002']
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5.268'],
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5.405'],
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5.405.001'],
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5.405.002']
            ]
 
 def commands():
