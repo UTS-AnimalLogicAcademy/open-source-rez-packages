@@ -5,8 +5,7 @@ FFmpeg-n3.3.5/
 oiio-Release-1.8.5/
 build/
 .idea/
-USD-0.8.2/
-USD-0.8.3/
+USD-*/
 MaterialX-1.35.3/
 alembic-1.5.8/
 ilmbase-2.2.0/
