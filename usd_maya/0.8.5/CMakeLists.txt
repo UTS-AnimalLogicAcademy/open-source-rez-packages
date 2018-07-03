@@ -15,7 +15,7 @@ set_option(BOOST_ROOT $ENV{REZ_BOOST_ROOT})
 
 set_option(TBB_ROOT_DIR $ENV{REZ_TBB_ROOT})
 set_option(TBB_INCLUDE_DIR $ENV{REZ_TBB_ROOT}/include)
-set_option(TBB_LIBRARY $ENV{REZ_TBB_ROOT}/lib/intel64/gcc4.8.5/)
+set_option(TBB_LIBRARY $ENV{TBB_LIBRARIES})
 
 set_option(OPENEXR_LOCATION $ENV{REZ_OPENEXR_ROOT})
 set_option(OPENEXR_LIBRARY_DIR $ENV{REZ_OPENEXR_ROOT}/lib)
@@ -39,7 +39,7 @@ set_option(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
 
 set_option(MAYA_BASE_DIR $ENV{MAYA_BASE_DIR})
 set_option(MAYA_LOCATION $ENV{MAYA_BASE_DIR})
-set_option(MAYA_tbb_LIBRARY $ENV{REZ_TBB_ROOT}/lib/intel64/gcc4.8.5/libtbb.so)
+set_option(MAYA_tbb_LIBRARY $ENV{TBB_LIBRARIES}/libtbb.so)
 
 set_option(PXR_BUILD_MAYA_PLUGIN ON)
 
