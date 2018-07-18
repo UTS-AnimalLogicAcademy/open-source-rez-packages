@@ -14,6 +14,7 @@ requires = [
     'pyilmbase-2.2',
     'oiio-1.8',
     'ptex-2.0',
+    'PyOpenGL'
 ]
 
 build_requires = [
