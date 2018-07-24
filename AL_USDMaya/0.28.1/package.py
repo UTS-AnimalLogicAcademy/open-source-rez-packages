@@ -12,7 +12,10 @@ requires = [
 build_requires = ['cmake-3.2']
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.5']
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.4'],
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.5'],
+            # internally, we release commits to the usd dev branch with a sub-minor version number:
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.6.001']
            ]
 
 def commands():

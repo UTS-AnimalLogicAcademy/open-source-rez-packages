@@ -8,10 +8,14 @@ requires = [
     'qt-5.6'
 ]
 
-build_requires = ['cmake-3.2']
+build_requires = [
+    'cmake-3.2',
+    'googletest-1.8.0'
+]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.4']
+#            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.4'],
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.5']
            ]
 
 def commands():
