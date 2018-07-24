@@ -1,5 +1,4 @@
 USDForUnity-USD-0.7.5
-AL_USDMaya-0.25.0/
 Tools-0.2.15/
 FFmpeg-n3.3.5/
 oiio-Release-1.8.5/
@@ -22,3 +21,4 @@ pybind11-2.2.1
 *.zip
 */0.8.*/USD-0.8.*/
 /AL_USDMaya/*/AL_USDMaya*/
+googletest-release-*/

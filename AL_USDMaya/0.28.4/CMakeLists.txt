@@ -46,6 +46,7 @@ set_option(MAYA_BASE_DIR $ENV{MAYA_BASE_DIR})
 set_option(MAYA_LOCATION $ENV{MAYA_BASE_DIR})
 set_option(MAYA_tbb_LIBRARY $ENV{REZ_TBB_ROOT}/lib/intel64/gcc4.4/libtbb.so)
 
+set_option(USD_ROOT $ENV{REZ_USD_ROOT})
 set_option(USD_CONFIG_FILE $ENV{REZ_USD_ROOT}/pxrConfig.cmake)
 
 add_subdirectory("AL_USDMaya-$ENV{BUILD_VERSION}")

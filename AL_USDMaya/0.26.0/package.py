@@ -11,7 +11,10 @@ requires = [
 build_requires = ['cmake-3.2']
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.3']
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.3'],
+#            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.4']
+#            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.4'],
+#            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.6.001']
            ]
 
 def commands():
