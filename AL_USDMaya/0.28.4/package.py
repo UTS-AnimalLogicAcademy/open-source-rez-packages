@@ -26,4 +26,4 @@ def commands():
     env.PYTHONPATH.append("{this.root}/lib/python")
     env.LD_LIBRARY_PATH.append("{this.root}/lib")
     env.PXR_PLUGINPATH.append("{this.root}/share/usd/plugins")
-
+    env.AL_USDMAYA_LOCATION.set("{this.root}/plugin")
