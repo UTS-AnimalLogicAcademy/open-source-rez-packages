@@ -49,11 +49,5 @@ set_option(PTEX_LOCATION $ENV{REZ_PTEX_ROOT})
 set_option(PTEX_INCLUDE_DIR $ENV{REZ_PTEX_ROOT}/include)
 set_option(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
 
-set_option(MAYA_BASE_DIR $ENV{MAYA_BASE_DIR})
-set_option(MAYA_LOCATION $ENV{MAYA_BASE_DIR})
-set_option(MAYA_tbb_LIBRARY $ENV{TBB_LIBRARIES}/libtbb.so)
-set_option(PXR_BUILD_MAYA_PLUGIN ON)
-
-
 #set_option(PXR_BUILD_DOCUMENTATION ON)
 add_subdirectory("USD-0.8.5")

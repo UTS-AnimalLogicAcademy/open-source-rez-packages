@@ -19,8 +19,7 @@ requires = [
 
 build_requires = [
     'cmake-3.2',
-    'pyside-1.2',
-    'maya-2017'
+    'pyside-1.2'
 ]
 
 variants = [['platform-linux', 'arch-x86_64']]

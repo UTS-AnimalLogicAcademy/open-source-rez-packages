@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '0.8.6.001'
+version = '18.11'
 
 requires = [
     'alembic-1.5',
@@ -10,11 +10,14 @@ requires = [
     'tbb-4.4.6',
     'opensubdiv-3.2',
     'ilmbase-2.2',
+    'jinja-2',
     'openexr-2.2',
     'pyilmbase-2.2',
+    'materialx',
     'oiio-1.8',
     'ptex-2.0',
-    'PyOpenGL'
+    'PyOpenGL',
+    'embree_lib'
 ]
 
 build_requires = [
