@@ -55,7 +55,5 @@ set_option(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
 set_option(EMBREE_LOCATION $ENV{REZ_EMBREE_LIB_ROOT})
 set_option(PXR_BUILD_EMBREE_PLUGIN ON)
 
-set_option(PXR_BUILD_MATERIALX_PLUGIN ON)
-
 #set_option(PXR_BUILD_DOCUMENTATION ON)
 add_subdirectory("USD-$ENV{VERSION}")
