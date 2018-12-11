@@ -15,7 +15,8 @@ build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-18.11']
+            ['platform-linux', 'arch-x86_64', 'maya-2017'],
+            ['platform-linux', 'arch-x86_64', 'maya-2018']
            ]
 
 def commands():
