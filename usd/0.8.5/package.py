@@ -12,6 +12,7 @@ requires = [
     'ilmbase-2.2',
     'openexr-2.2',
     'pyilmbase-2.2',
+    'jinja-2',
     'oiio-1.8',
     'ptex-2.0',
     'PyOpenGL'
