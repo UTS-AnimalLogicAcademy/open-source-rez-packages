@@ -11,11 +11,9 @@ requires = [
 
 build_requires = [
     'cmake-3.2',
-    'katana'
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'katana-3.0'],
             ['platform-linux', 'arch-x86_64', 'katana-3.1']
            ]
 
