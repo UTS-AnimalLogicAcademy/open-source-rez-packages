@@ -9,10 +9,9 @@ macro(set_option option value)
 endmacro()
 # http://edsiper.linuxchile.cl/blog/2016/01/08/cmake-override-subdirectory-options/
 
-message(1 ${CMAKE_SOURCE_DIR})
 set_option(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}/USD-0.8.5)
-message(2 ${CMAKE_SOURCE_DIR})
 
+set_option(PYTHON_LIBRARY $ENV{PYTHON_LIB_HOME}/libpython2.7.so)
 
 set_option(BOOST_ROOT $ENV{REZ_BOOST_ROOT})
 
