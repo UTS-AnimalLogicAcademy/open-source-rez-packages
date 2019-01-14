@@ -2,9 +2,7 @@
 
 name = 'jemalloc'
 
-version = '5.1.0'
-
-variants = [['platform-linux', 'arch-x86_64']]
+version = '4.5.0'
 
 def commands():
     env.LD_LIBRARY_PATH.append('{root}/lib/')

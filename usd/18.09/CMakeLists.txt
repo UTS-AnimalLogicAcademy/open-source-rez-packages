@@ -13,6 +13,9 @@ set_option(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}/USD-$ENV{VERSION})
 
 #set_option(PYTHON_LIBRARY $ENV{PYTHON_LIB_HOME}/libpython2.7.so)
 
+# jemalloc
+set_option(PXR_MALLOC_LIBRARY $ENV{REZ_JEMALLOC_ROOT}/lib/libjemalloc.so)
+
 #alembic plugin
 set_option(ALEMBIC_DIR $ENV{REZ_ALEMBIC_ROOT})
 set_option(ALEMBIC_LIBRARY_DIR $ENV{REZ_ALEMBIC_ROOT}/lib)

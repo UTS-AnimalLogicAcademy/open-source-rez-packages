@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '18.09'
+version = '18.09.1'
 
 requires = [
     'alembic-1.5',
@@ -10,6 +10,7 @@ requires = [
     'tbb-4.4.6',
     'opensubdiv-3.2',
     'ilmbase-2.2',
+    'jemalloc-4'
     'jinja-2',
     'openexr-2.2',
     'pyilmbase-2.2',
