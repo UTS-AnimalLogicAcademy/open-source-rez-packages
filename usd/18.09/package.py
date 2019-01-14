@@ -10,7 +10,7 @@ requires = [
     'tbb-4.4.6',
     'opensubdiv-3.2',
     'ilmbase-2.2',
-    'jemalloc-4'
+    'jemalloc-4',
     'jinja-2',
     'openexr-2.2',
     'pyilmbase-2.2',
