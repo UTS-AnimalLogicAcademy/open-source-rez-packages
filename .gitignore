@@ -2,6 +2,7 @@ cppzmq-*/
 USDForUnity-USD-*
 Tools-*/
 FFmpeg-n*/
+jemalloc-*/
 oiio-Release-*/
 build/
 .idea/
