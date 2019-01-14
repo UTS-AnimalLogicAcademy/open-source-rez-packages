@@ -2,7 +2,7 @@
 
 name = 'usdview'
 
-version = '18.11.01'
+version = '18.11'
 
 requires = [
     'pyside-1.2',
