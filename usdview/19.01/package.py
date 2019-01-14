@@ -6,8 +6,7 @@ version = '19.01'
 
 requires = [
     'pyside-1.2',
-    'usd-19.01',
-    'turret_usd'
+    'usd-19.01'
 ]
 
 def commands():
