@@ -1,4 +1,4 @@
-This will download, build, and create a [rez](http://nerdvegas.github.io/rez/) package for usdview 0.8.6.001 (commit f6143256ecafa48b09e207ce7d1db37decb013c6 from the dev ranch) on
+This will download, build, and create a [rez](http://nerdvegas.github.io/rez/) package for usdview 0.8.4 on
 
 Tested on RedHat 3.10.0-693.11.1.el7.x86_64
 
@@ -12,7 +12,7 @@ There is no source code in this package, it is purely resolving an environment i
 ## Requirements
 
 **rez packages:**
- - usd-0.8.6.001
+ - usd-0.8.5
  - pyside-1.2
 
 ## Building

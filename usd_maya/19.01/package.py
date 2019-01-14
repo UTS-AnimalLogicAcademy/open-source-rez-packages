@@ -2,10 +2,10 @@
 
 name = 'usd_maya'
 
-version = '19.01.rc1'
+version = '19.01'
 
 requires = [
-    'usd-19.01.rc1',
+    'usd-19.01',
     'PyOpenGL-3.1.0'
 ]
 

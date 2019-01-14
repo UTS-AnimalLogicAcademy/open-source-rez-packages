@@ -4,15 +4,13 @@ name = 'cppzmq'
 
 version = '4.3.0'
 
-requires = [
-            'libzmq'
-           ]
+requires = ['libzmq']
+
+build_requires = ['cmake-3+<4']
 
 variants = [['platform-linux', 'arch-x86_64']]
 
-build_requires = ['cmake-3.6']
+def commands():
+    env.CPPZMQ_INCLUDE.set("{this.root}/include")
 
-#def commands():
-#    appendenv('LD_LIBRARY_PATH', '{root}/lib/')
-#    appendenv('PATH', '{root}/bin/')
-
+timestamp = 1545278351

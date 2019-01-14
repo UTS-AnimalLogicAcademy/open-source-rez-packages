@@ -2,10 +2,10 @@
 
 name = 'usd_houdini'
 
-version = '19.01.rc1'
+version = '19.01'
 
 requires = [
-    'usd-19.01.rc1',
+    'usd-19.01',
     'PyOpenGL-3.1.0'
 ]
 
@@ -14,8 +14,8 @@ build_requires = [
 ]
 
 variants = [
-#            ['platform-linux', 'arch-x86_64', 'houdini-16.5'],
-            ['platform-linux', 'arch-x86_64', 'houdini-17.0']
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5'],
+#            ['platform-linux', 'arch-x86_64', 'houdini-17.0']
 #            ['platform-linux', 'arch-x86_64', 'houdini-17.5']
            ]
 

@@ -2,13 +2,14 @@
 
 name = 'usdview'
 
-version = '0.8.6.00'
+version = '18.11.01'
 
 requires = [
     'pyside-1.2',
-    'usd-0.8.6.001',
+    'usd-18.11',
     'zmq_server',
-    'ala_usd_resolver'
+    'ala_usd_resolver',
+    'turret_usd'
 ]
 
 def commands():

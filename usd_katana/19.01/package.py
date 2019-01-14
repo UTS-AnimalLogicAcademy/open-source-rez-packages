@@ -2,10 +2,10 @@
 
 name = 'usd_katana'
 
-version = '19.01.rc1'
+version = '19.01'
 
 requires = [
-    'usd-19.01.rc1',
+    'usd-19.01',
     'PyOpenGL-3.1.0'
 ]
 
@@ -14,7 +14,9 @@ build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'katana-3.1']
+            ['platform-linux', 'arch-x86_64', 'katana-3.0.1'],
+            ['platform-linux', 'arch-x86_64', 'katana-3.0.7'],
+            ['platform-linux', 'arch-x86_64', 'katana-3.1.1']
            ]
 
 
