@@ -45,9 +45,6 @@ set_option(MAYA_tbb_LIBRARY $ENV{TBB_LIBRARIES}/libtbb.so)
 
 set_option(PXR_BUILD_MAYA_PLUGIN ON)
 
-set_option(PXR_BUILD_USD OFF)
-set(USD_INCLUDE_DIR $ENV{REZ_USD_ROOT}/include)
-set(USD_LIB_DIR $ENV{REZ_USD_ROOT}/lib)
-
+set_option(PXR_BUILD_IMAGING OFF)
 
 add_subdirectory("USD-$ENV{VERSION}")         
