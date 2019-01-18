@@ -2,11 +2,12 @@
 
 name = 'usd_maya'
 
-version = '18.09'
+version = '18.09.1'
 
 requires = [
     'usd-18.09',
-    'PyOpenGL-3.1.0'
+    'PyOpenGL-3.1.0',
+    'jemalloc-4'
 ]
 
 build_requires = [
@@ -14,15 +15,19 @@ build_requires = [
 ]
 
 variants = [
-    ['platform-linux', 'arch-x86_64', 'maya-2017'],
-    ['platform-linux', 'arch-x86_64', 'maya-2018']
+    ['platform-linux', 'arch-x86_64', 'maya-2017']
+#    ['platform-linux', 'arch-x86_64', 'maya-2018']
 ]
 
 def commands():
-    env.MAYA_SCRIPT_PATH.append("{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/")
-    env.MAYA_SHELVES_ICONS = "{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/"
-    env.MAYA_SHELF_PATH.append("{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/")
-    env.MAYA_PLUG_IN_PATH.append("{this.root}/third_party/maya/plugin")
+    env.MAYA_SCRIPT_PATH.append("{this.root}/third_party/maya/lib/usd/usdMaya/resources/")
+    env.MAYA_SHELVES_ICONS = "{this.root}/third_party/maya/lib/usd/usdMaya/resources/"
+    env.MAYA_SHELF_PATH.append("{this.root}/third_party/maya/lib/usd/usdMaya/resources/")
     env.XBMLANGPATH.append("{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/")
+    env.MAYA_PLUG_IN_PATH.append("{this.root}/third_party/maya/plugin")
+
+    # not sure about this:
+    env.PYTHONPATH.prepend("{this.root}/lib/python")
+
     env.MAYA_VP2_DEVICE_OVERRIDE.set("VirtualDeviceGL")
     env.MAYA_VP2_USE_VP1_SELECTION.set(1)

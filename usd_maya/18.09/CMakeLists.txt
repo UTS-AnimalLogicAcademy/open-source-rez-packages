@@ -13,6 +13,9 @@ set_option(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}/USD-$ENV{VERSION})
 
 #set_option(PYTHON_LIBRARY $ENV{PYTHON_LIB_HOME}/libpython2.7.so)
 
+# jemalloc
+set_option(PXR_MALLOC_LIBRARY $ENV{REZ_JEMALLOC_ROOT}/lib/libjemalloc.so)
+
 set_option(BOOST_ROOT $ENV{REZ_BOOST_ROOT})
 
 set_option(TBB_ROOT_DIR $ENV{REZ_TBB_ROOT})
@@ -48,6 +51,5 @@ set_option(PXR_BUILD_MAYA_PLUGIN ON)
 set_option(PXR_BUILD_USD OFF)
 set(USD_INCLUDE_DIR $ENV{REZ_USD_ROOT}/include)
 set(USD_LIB_DIR $ENV{REZ_USD_ROOT}/lib)
-
 
 add_subdirectory("USD-$ENV{VERSION}")         

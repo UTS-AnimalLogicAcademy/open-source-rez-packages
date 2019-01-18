@@ -13,3 +13,6 @@ rm USD-$VERSION/cmake/defaults/Options.cmake
 cp patch/CMakeLists_maya.txt USD-$VERSION/third_party/maya/CMakeLists.txt
 cp patch/CMakeLists_root.txt USD-$VERSION/CMakeLists.txt
 cp patch/Options.cmake USD-$VERSION/cmake/defaults/Options.cmake
+cp patch/__init__.py USD-$VERSION/third_party/maya/lib/
+cp patch/maya_plugin_lib_cmakelists.txt USD-$VERSION/third_party/maya/lib/CMakeLists.txt
+
