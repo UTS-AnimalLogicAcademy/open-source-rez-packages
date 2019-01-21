@@ -2,7 +2,7 @@
 
 name = 'usd_maya'
 
-version = '19.01.1'
+version = '19.01.2'
 
 requires = [
     'boost-1.55',
@@ -14,7 +14,6 @@ requires = [
     'pyilmbase-2.2',
     'materialx',
     'oiio-1.8',
-    'ptex-2.0',
     'embree_lib',
     'PyOpenGL-3.1.0',
     'jemalloc-4'
