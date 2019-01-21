@@ -5,8 +5,7 @@ name = 'ilmbase'
 version = '2.2.0'
 
 build_requires = [
-            'cmake',
-            'utsala_cmake_modules'
+            'cmake'
            ]
 
 variants = [['platform-linux', 'arch-x86_64']]
