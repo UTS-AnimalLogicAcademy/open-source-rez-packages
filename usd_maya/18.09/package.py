@@ -5,30 +5,19 @@ name = 'usd_maya'
 version = '18.09.1'
 
 requires = [
-    'boost-1.55',
-    'tbb-4.4.6',
-    'opensubdiv-3.2',
-    'ilmbase-2.2',
-    'jinja-2',
-    'openexr-2.2',
-    'pyilmbase-2.2',
-    'materialx',
-    'oiio-1.8',
-    'ptex-2.0',
-    'embree_lib',
+    'usd-18.09',
     'PyOpenGL-3.1.0',
     'jemalloc-4'
 ]
 
 build_requires = [
     'cmake-3.2',
-    'pyside-1.2'
 ]
 
 variants = [
     ['platform-linux', 'arch-x86_64', 'maya-2017'],
     ['platform-linux', 'arch-x86_64', 'maya-2018'],
-    ['platform-linux', 'arch-x86_64', 'maya-2019', 'devtoolset-6'] # gcc-6.1 is required for maya 2019 plugins
+    ['platform-linux', 'arch-x86_64', 'maya-2019', 'devtoolset-6']
 ]
 
 def commands():
@@ -38,9 +27,7 @@ def commands():
     env.XBMLANGPATH.append("{this.root}/third_party/maya/share/usd/plugins/usdMaya/resources/")
     env.MAYA_PLUG_IN_PATH.append("{this.root}/third_party/maya/plugin")
 
-    env.PYTHONPATH.prepend("{this.root}/lib/python")
-    env.LD_LIBRARY_PATH.append('{root}/lib/')
-    appendenv('PATH', '{root}/bin/')
+    env.PYTHONPATH.append("{this.root}/lib/python")
 
     env.MAYA_VP2_DEVICE_OVERRIDE.set("VirtualDeviceGL")
     env.MAYA_VP2_USE_VP1_SELECTION.set(1)
