@@ -1,7 +1,0 @@
-# copy custom __init__.py to append to "pxr" namespace
-install(FILES __init__.py DESTINATION ./lib/python)
-
-add_subdirectory(px_vp20)
-add_subdirectory(pxrUsdMayaGL)
-add_subdirectory(usdMaya)
-
