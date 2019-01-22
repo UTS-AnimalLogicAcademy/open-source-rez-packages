@@ -10,13 +10,13 @@ requires = [
 
 build_requires = [
     'cmake-3.2',
-    'googletest-1.8.0',
-    'usd_maya-18.11'
+    'googletest-1.8.0'
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'maya-2017'],
-            ['platform-linux', 'arch-x86_64', 'maya-2018']
+            ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-18.11'],
+            ['platform-linux', 'arch-x86_64', 'maya-2018', 'usd-18.11'],
+            ['platform-linux', 'arch-x86_64', 'maya-2019', 'usd-18.11', 'devtoolset-6']
            ]
 
 def commands():
