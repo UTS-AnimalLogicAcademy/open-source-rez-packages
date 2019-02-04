@@ -26,7 +26,7 @@ build_requires = [
 ]
 
 private_build_requires = [
-    'cmake-3.6'
+    'cmake-3.2'
 ]
 
 variants = [['platform-linux', 'arch-x86_64']]
