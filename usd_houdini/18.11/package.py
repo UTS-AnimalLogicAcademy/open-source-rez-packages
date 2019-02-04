@@ -9,12 +9,12 @@ requires = [
     'PyOpenGL-3.1.0'
 ]
 
-build_requires = [
+private_build_requires = [
     'cmake-3.2',
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'houdini-16.5.435']
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5']
            ]
 
 def commands():

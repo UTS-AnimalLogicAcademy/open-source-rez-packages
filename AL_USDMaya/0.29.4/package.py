@@ -9,8 +9,11 @@ requires = [
 ]
 
 build_requires = [
-    'cmake-3.2',
     'googletest-1.8.0'
+]
+
+private_build_requires = [
+    'cmake-3.2'
 ]
 
 variants = [

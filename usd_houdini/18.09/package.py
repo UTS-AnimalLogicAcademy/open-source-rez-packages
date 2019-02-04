@@ -5,17 +5,28 @@ name = 'usd_houdini'
 version = '18.09'
 
 requires = [
-    'usd-18.09',
-    'PyOpenGL-3.1.0'
+    'boost-1.55',
+    'tbb-4.4.6',
+    'opensubdiv-3.2',
+    'ilmbase-2.2',
+    'jinja-2',
+    'openexr-2.2',
+    'python',
+    'pyside',
+    'pyilmbase-2.2',
+    'materialx',
+    'oiio-1.8',
+    'embree_lib',
+    'PyOpenGL-3.1.0',
+    'jemalloc-4'
 ]
 
-build_requires = [
+private_build_requires = [
     'cmake-3.2',
 ]
 
 variants = [
-#            ['platform-linux', 'arch-x86_64', 'houdini-16.5.435']
-            ['platform-linux', 'arch-x86_64', 'houdini-17.5']
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5']
            ]
 
 def commands():

@@ -9,7 +9,7 @@ requires = [
     'PyOpenGL-3.1.0'
 ]
 
-build_requires = [
+private_build_requires = [
     'cmake-3.2',
 ]
 

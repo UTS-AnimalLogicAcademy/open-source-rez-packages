@@ -20,8 +20,11 @@ requires = [
 ]
 
 build_requires = [
-    'cmake-3.2',
     'pyside-1.2'
+]
+
+private_build_requires = [
+    'cmake-3.2'
 ]
 
 variants = [

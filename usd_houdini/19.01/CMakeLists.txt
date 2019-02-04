@@ -35,18 +35,12 @@ $ENV{REZ_OPENSUBDIV_ROOT}/lib/libosdCPU.so
 $ENV{REZ_OPENSUBDIV_ROOT}/lib/libosdGPU.so
 )
 
-set_option(PTEX_LOCATION $ENV{REZ_PTEX_ROOT})
-set_option(PTEX_INCLUDE_DIR $ENV{REZ_PTEX_ROOT}/include)
-set_option(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
+set_option(PXR_ENABLE_PTEX_SUPPORT FALSE)
 
 set_option(HOUDINI_BASE_DIR $ENV{HOUDINI_ROOT})
 set_option(HOUDINI_INCLUDE_DIRS $ENV{HOUDINI_ROOT}/toolkit/include)
 set_option(HOUDINI_LIB_DIRS $ENV{HOUDINI_ROOT}/dsolib)
 set_option(PXR_BUILD_HOUDINI_PLUGIN ON)
-
-set_option(PXR_BUILD_USD OFF)
-set(USD_INCLUDE_DIR $ENV{REZ_USD_ROOT}/include)
-set(USD_LIB_DIR $ENV{REZ_USD_ROOT}/lib)
 
 add_subdirectory("USD-$ENV{VERSION}")         
 

@@ -9,7 +9,7 @@ requires = [
     'googletest-1.8.0'
 ]
 
-build_requires = ['cmake-3.2']
+private_build_requires = ['cmake-3.2']
 
 variants = [
             ['platform-linux', 'arch-x86_64', 'maya-2017', 'usd-0.8.4'],

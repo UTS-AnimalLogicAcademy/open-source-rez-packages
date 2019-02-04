@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '18.09.1'
+version = '18.09'
 
 requires = [
     'alembic-1.5',
@@ -22,8 +22,11 @@ requires = [
 ]
 
 build_requires = [
-    'cmake-3.2',
     'pyside-1.2'
+]
+
+private_build_requires = [
+    'cmake-3.2'
 ]
 
 variants = [['platform-linux', 'arch-x86_64']]
