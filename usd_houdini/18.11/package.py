@@ -14,7 +14,7 @@ private_build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'houdini-16.5']
+            ['platform-linux', 'arch-x86_64', 'houdini-16.5.435']
            ]
 
 def commands():
