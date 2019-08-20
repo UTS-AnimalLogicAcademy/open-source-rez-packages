@@ -19,7 +19,8 @@ requires = [
     'ptex-2.0',
     'PyOpenGL',
     'embree_lib',
-    'glew'
+    'glew',
+    'renderman-22.6'
 ]
 
 build_requires = [
