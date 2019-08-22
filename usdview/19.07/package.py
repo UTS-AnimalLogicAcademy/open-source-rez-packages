@@ -2,11 +2,12 @@
 
 name = 'usdview'
 
-version = '19.07'
+version = '19.07.001'
 
 requires = [
     'pyside-1.2',
-    'usd-19.07'
+    'usd-19.07',
+    'ocio_configs'
 ]
 
 def commands():
