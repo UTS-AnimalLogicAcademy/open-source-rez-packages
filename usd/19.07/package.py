@@ -20,7 +20,8 @@ requires = [
     'PyOpenGL',
     'embree_lib',
     'glew',
-    'renderman-22.6'
+    'renderman-22.6',
+    'ocio-1.0.9'
 ]
 
 build_requires = [
