@@ -18,7 +18,7 @@ variants = [
             ['platform-linux', 'arch-x86_64', 'katana-3.0.7'],
             ['platform-linux', 'arch-x86_64', 'katana-3.1.1'],
             ['platform-linux', 'arch-x86_64', 'katana-3.1.2'],
-            ['platform-linux', 'arch-x86_64', 'katana-3.1.3']
+            #['platform-linux', 'arch-x86_64', 'katana-3.1.3'] # Causes build errors with 19.07
            ]
 
 
