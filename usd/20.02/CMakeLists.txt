@@ -11,11 +11,7 @@ endmacro()
 
 set_option(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}/USD-$ENV{VERSION})
 
-#set_option(PYTHON_EXECUTABLE "/usr/bin/python2.7")
-#set_option(PYTHON_VERSION_STRING "2.7.5")
-#set_option(PYTHON_VERSION_MAJOR "2")
-#set_option(PYTHON_VERSION_MINOR "7")
-#set_option(PYTHON_VERSION_PATCH "5")
+#set_option(PYTHON_LIBRARY $ENV{PYTHON_LIB_HOME}/libpython2.7.so)
 
 # jemalloc
 set_option(PXR_MALLOC_LIBRARY $ENV{REZ_JEMALLOC_ROOT}/lib/libjemalloc.so)
@@ -24,7 +20,7 @@ set_option(PXR_MALLOC_LIBRARY $ENV{REZ_JEMALLOC_ROOT}/lib/libjemalloc.so)
 set_option(ALEMBIC_DIR $ENV{REZ_ALEMBIC_ROOT})
 set_option(ALEMBIC_LIBRARY_DIR $ENV{REZ_ALEMBIC_ROOT}/lib)
 set_option(ALEMBIC_INCLUDE_DIR $ENV{REZ_ALEMBIC_ROOT}/include)
-set_option(PXR_BUILD_ALEMBIC_PLUGIN OFF)
+set_option(PXR_BUILD_ALEMBIC_PLUGIN ON)
 
 # boost
 set_option(BOOST_ROOT $ENV{REZ_BOOST_ROOT})
@@ -59,8 +55,26 @@ set_option(PTEX_LOCATION $ENV{REZ_PTEX_ROOT})
 set_option(PTEX_INCLUDE_DIR $ENV{REZ_PTEX_ROOT}/include)
 set_option(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
 
+# embree
 set_option(EMBREE_LOCATION $ENV{REZ_EMBREE_LIB_ROOT})
 set_option(PXR_BUILD_EMBREE_PLUGIN ON)
+
+#set_option(PXR_BUILD_MATERIALX_PLUGIN OFF)
+
+# renderman
+set_option(RENDERMAN_LOCATION $ENV{RMANTREE})
+set_option(PXR_BUILD_PRMAN_PLUGIN ON)
+
+# glew
+set(GLEW_LOCATION $ENV{REZ_GLEW_ROOT})
+
+# open color io
+set(OCIO_INCLUDE_DIRS $ENV{REZ_OCIO_ROOT}/include)
+set(OCIO_LIBRARIES $ENV{REZ_OCIO_ROOT}/lib/libOpenColorIO.so)
+set(OCIO_LOCATION $ENV{REZ_OCIO_ROOT})
+set_option(PXR_BUILD_OPENCOLORIO_PLUGIN ON)
+
+set_option(PXR_BUILD_TESTS OFF)
 
 #set_option(PXR_BUILD_DOCUMENTATION ON)
 add_subdirectory("USD-$ENV{VERSION}")
