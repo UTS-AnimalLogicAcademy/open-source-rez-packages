@@ -2,7 +2,7 @@
 
 name = 'usd_maya'
 
-version = '19.11'
+version = '19.11.1'
 
 requires = [
     'boost-1.55',
@@ -17,8 +17,7 @@ requires = [
     'embree_lib',
     'PyOpenGL-3.1.0',
     'jemalloc-4',
-    'glew',
-    'python-2.7'
+    'glew'
 ]
 
 build_requires = [
@@ -32,7 +31,7 @@ private_build_requires = [
 variants = [
     #['platform-linux', 'arch-x86_64', 'maya-2017'],
     ['platform-linux', 'arch-x86_64', 'maya-2018'],
-    ['platform-linux', 'arch-x86_64', 'maya-2019', 'devtoolset-6'] # gcc-6.1 is required for maya 2019 plugins
+#    ['platform-linux', 'arch-x86_64', 'maya-2019', 'devtoolset-6'] # gcc-6.1 is required for maya 2019 plugins
 ]
 
 def commands():

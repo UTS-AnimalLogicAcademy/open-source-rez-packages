@@ -11,6 +11,8 @@ endmacro()
 
 set_option(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}/USD-$ENV{VERSION})
 
+set_option(DPXR_ENABLE_OPENVDB_SUPPORT ON)
+
 #set_option(PYTHON_LIBRARY $ENV{PYTHON_LIB_HOME}/libpython2.7.so)
 
 # jemalloc
