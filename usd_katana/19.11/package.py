@@ -14,8 +14,9 @@ private_build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'katana-3.0.7']
-#            ['platform-linux', 'arch-x86_64', 'katana-3.1.5']
+            ['platform-linux', 'arch-x86_64', 'katana-3.0.7'],
+            ['platform-linux', 'arch-x86_64', 'katana-3.5.1'],
+            ['platform-linux', 'arch-x86_64', 'katana-3.5.2']
            ]
 
 
