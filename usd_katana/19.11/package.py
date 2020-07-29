@@ -2,7 +2,7 @@
 
 name = 'usd_katana'
 
-version = '19.11.1'
+version = '19.11.2'
 
 requires = [
     'usd-19.11',
@@ -15,6 +15,7 @@ private_build_requires = [
 
 variants = [
             ['platform-linux', 'arch-x86_64', 'katana-3.0'],
+            ['platform-linux', 'arch-x86_64', 'katana-3.5'],
             ['platform-linux', 'arch-x86_64', 'katana-3.6']
            ]
 
