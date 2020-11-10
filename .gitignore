@@ -1,5 +1,5 @@
 pstl2019_20191006oss/
-tbb2019_20191006oss/
+tbb20*/
 KatanaUsdPlugins-*/
 nuke-ML-server-*/
 cppzmq-*/
@@ -22,9 +22,9 @@ ptex-*/
 PySide-*/
 pybind11-*/
 *.pyc
-*.gz
-*.tgz
-*.zip
+*.gz*
+*.tgz*
+*.zip*
 */0.8.*/USD-0.8.*/
 /AL_USDMaya/*/AL_USDMaya*/
 /glew/*/glew*/
