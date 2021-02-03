@@ -2,13 +2,15 @@
 
 name = 'pyilmbase'
 
-version = '2.2.0'
+version = '2.2.0.1'
 
 requires = ['ilmbase-2.2.0',
-            'boost-1.55'
            ]
 
-variants = [['platform-linux', 'arch-x86_64']]
+variants = [
+            ['platform-linux', 'arch-x86_64', 'boost-1.55'],
+            ['platform-linux', 'arch-x86_64', 'boost-1.61']
+           ]
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib/')

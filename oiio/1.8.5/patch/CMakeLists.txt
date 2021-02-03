@@ -58,7 +58,7 @@ set (OIIO_VERSION_RELEASE_TYPE ${PROJECT_VERSION_RELEASE_TYPE})
 # former is designated for definitions (-Dblah) and the latter is for
 # compile flags (-Wno-foo).
 
-set(CMAKE_INSTALL_PREFIX $ENV{PACKAGE_INSTALLATION_ROOT}/oiio/1.8.5)
+#set(CMAKE_INSTALL_PREFIX $ENV{PACKAGE_INSTALLATION_ROOT}/oiio/1.8.5)
 
 if (VERBOSE)
     message (STATUS "Project source dir = ${PROJECT_SOURCE_DIR}")

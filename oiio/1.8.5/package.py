@@ -2,17 +2,19 @@
 
 name = 'oiio'
 
-version = '1.8.5'
+version = '1.8.5.1'
 
 requires = [
             'openexr',
             'ilmbase',
             'ocio',
-            'ffmpeg',
-            'boost'
+            'ffmpeg'
             ]
 
-variants = [['platform-linux', 'arch-x86_64']]
+variants = [
+            ['platform-linux', 'arch-x86_64', 'boost-1.55'],
+            ['platform-linux', 'arch-x86_64', 'boost-1.61']
+           ]
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64/')
