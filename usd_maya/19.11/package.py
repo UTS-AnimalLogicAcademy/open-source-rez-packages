@@ -6,7 +6,6 @@ version = '19.11.1'
 
 requires = [
     'boost-1.55',
-    'tbb-4.4.6',
     'opensubdiv-3.2',
     'ilmbase-2.2',
     'jinja-2',
@@ -30,8 +29,8 @@ private_build_requires = [
 
 variants = [
     #['platform-linux', 'arch-x86_64', 'maya-2017'],
-    ['platform-linux', 'arch-x86_64', 'maya-2018'],
-#    ['platform-linux', 'arch-x86_64', 'maya-2019', 'devtoolset-6'] # gcc-6.1 is required for maya 2019 plugins
+#    ['platform-linux', 'arch-x86_64', 'maya-2018', 'tbb-4.4.6'],
+    ['platform-linux', 'arch-x86_64', 'maya-2019', 'tbb-2017.0', 'devtoolset-6'] # gcc-6.1 is required for maya 2019 plugins
 ]
 
 def commands():
