@@ -9,7 +9,8 @@ export MAKE_THREADS=28
 mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$PACKAGE_VARIANT
 
 cd FFmpeg-n4.3.1
-./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$PACKAGE_VARIANT --enable-shared --cc="gcc -m64 -fPIC"
+./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$PACKAGE_VARIANT --enable-shared --cc="gcc -m64 -fPIC" --enable-gpl --enable-libx264
+#./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$PACKAGE_VARIANT --enable-shared --cc="gcc -m64 -fPIC"
 make -j$MAKE_THREADS
 make install -j$MAKE_THREADS
 cd ..

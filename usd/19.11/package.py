@@ -2,12 +2,11 @@
 
 name = 'usd'
 
-version = '19.11'
+version = '19.11.1'
 
 requires = [
     'alembic-1.5',
     'boost-1.55',
-    'tbb-4.4.6',
     'opensubdiv-3.2',
     'ilmbase-2.2',
     'jinja-2',
@@ -32,7 +31,10 @@ private_build_requires = [
     'cmake-3.2'
 ]
 
-variants = [['platform-linux', 'arch-x86_64']]
+variants = [
+            ['platform-linux', 'arch-x86_64', 'tbb-4.4.6'],
+            ['platform-linux', 'arch-x86_64', 'tbb-2017.0']
+]
 
 def commands():
     env.PYTHONPATH.append('{root}/lib/python')
