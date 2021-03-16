@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '19.11.1'
+version = '19.11.3'
 
 requires = [
     'alembic-1.5',
@@ -19,7 +19,6 @@ requires = [
     'PyOpenGL',
     'embree_lib',
     'glew',
-    'renderman-22.6',
     'ocio-1.0.9'
 ]
 
