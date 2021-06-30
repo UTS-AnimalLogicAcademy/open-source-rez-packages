@@ -22,5 +22,6 @@ def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64/')
     appendenv('PYTHONPATH', '{root}/lib64/python2.7/site-packages')
     setenv('OIIO_LIBRARY_PATH', '{root}/lib64')
+    appendenv('PATH', '{root}/bin')
 
 
