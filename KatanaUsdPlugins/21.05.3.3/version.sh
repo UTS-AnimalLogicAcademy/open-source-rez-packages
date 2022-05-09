@@ -1,0 +1,2 @@
+export BUILD_VERSION=21.05_fn3_py3
+export RELEASE_VERSION=21.05.3.3
