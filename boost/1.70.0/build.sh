@@ -8,7 +8,7 @@ mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
 
 cd boost_1_70_0
 ./bootstrap.sh --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
-./bjam cxxflags=-fPIC --disable-icu -a install
+./b2 install
 cd ..
 cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
 
