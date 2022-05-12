@@ -5,14 +5,14 @@ name = 'usd'
 version = '21.05'
 
 requires = [
-    'boost-1.61',
-    'tbb-2017',
+    'boost-1.70',
+    'tbb-2019.6',
     'opensubdiv-3.2',
     'ilmbase-2.2',
     'jinja-2',
     'jemalloc-4',
     'openexr-2.2',
-    'pyilmbase-2.2.0.1',
+    'pyilmbase-2.2.0.2',
     'materialx',
     'oiio-1.8',
     'ptex-2.0',
