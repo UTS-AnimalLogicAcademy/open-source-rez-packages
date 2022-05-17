@@ -2,7 +2,7 @@
 
 name = 'oiio'
 
-version = '1.8.5.2'
+version = '1.8.5.3'
 
 requires = [
             'openexr',
@@ -14,7 +14,8 @@ requires = [
 variants = [
             ['platform-linux', 'arch-x86_64', 'boost-1.55'],
             ['platform-linux', 'arch-x86_64', 'boost-1.61'],
-	    ['platform-linux', 'arch-x86_64', 'boost-1.70']
+	    ['platform-linux', 'arch-x86_64', 'boost-1.70'],
+	    ['platform-linux', 'arch-x86_64', 'boost-1.72']
            ]
 
 def commands():
