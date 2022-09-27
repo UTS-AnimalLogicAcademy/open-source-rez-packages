@@ -46,4 +46,6 @@ set_option(MAYA_tbb_LIBRARY $ENV{TBB_LIBRARIES}/libtbb.so)
 
 set_option(PXR_BUILD_MAYA_PLUGIN ON)
 
+set_option(BOOST_USE_STATIC_LIBS FALSE)
+
 add_subdirectory("USD-$ENV{VERSION}")

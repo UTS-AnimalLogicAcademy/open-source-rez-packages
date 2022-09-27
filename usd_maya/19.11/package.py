@@ -2,7 +2,7 @@
 
 name = 'usd_maya'
 
-version = '19.11.2'
+version = '19.11.3'
 
 requires = [
     'boost-1.55',
@@ -29,7 +29,7 @@ private_build_requires = [
 
 variants = [
     #['platform-linux', 'arch-x86_64', 'maya-2017'],
-    ['platform-linux', 'arch-x86_64', 'maya-2018', 'tbb-4.4.6'],
+   # ['platform-linux', 'arch-x86_64', 'maya-2018', 'tbb-4.4.6'],
     ['platform-linux', 'arch-x86_64', 'maya-2019', 'tbb-2017.0', 'devtoolset-6'] # gcc-6.1 is required for maya 2019 plugins
 ]
 

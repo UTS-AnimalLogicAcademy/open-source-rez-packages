@@ -2,16 +2,14 @@
 
 name = 'pyilmbase'
 
-version = '2.2.0.3'
+version = '2.2.0.1'
 
 requires = ['ilmbase-2.2.0',
            ]
 
 variants = [
             ['platform-linux', 'arch-x86_64', 'boost-1.55'],
-            ['platform-linux', 'arch-x86_64', 'boost-1.61'],
-            ['platform-linux', 'arch-x86_64', 'boost-1.70'],
-            ['platform-linux', 'arch-x86_64', 'boost-1.72']
+            ['platform-linux', 'arch-x86_64', 'boost-1.61']
            ]
 
 def commands():
