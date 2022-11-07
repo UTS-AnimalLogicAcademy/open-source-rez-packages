@@ -1,0 +1,2 @@
+export BUILD_VERSION=19.11_fn9
+export RELEASE_VERSION=19.11.9
