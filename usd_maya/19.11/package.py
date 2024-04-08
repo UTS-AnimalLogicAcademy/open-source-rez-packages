@@ -2,7 +2,7 @@
 
 name = 'usd_maya'
 
-version = '19.11.3'
+version = '19.11.4'
 
 requires = [
     'boost-1.55',

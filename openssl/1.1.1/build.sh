@@ -1,0 +1,29 @@
+#! /bin/bash
+
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages
+export PACKAGE_NAME=openssl
+export PACKAGE_VERSION=1.1.1
+export MAKE_THREADS=28
+
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+mkdir build
+cd build
+
+../openssl-1.1.1s/config --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION --openssldir=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/ssl
+make -j$MAKE_THREADS
+make test
+make install -j$MAKE_THREADS
+#mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/lib64/python3.9/site-packages
+#mv $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/PySide $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/lib64/python2.7/site-packages
+#cd ../..
+
+#mkdir Tools-0.2.15/build
+#cd Tools-0.2.15/build
+#cmake ..
+#make -j$MAKE_THREADS
+#make install -j$MAKE_THREADS
+
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

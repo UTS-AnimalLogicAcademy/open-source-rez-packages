@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '20.05'
+version = '20.05.1'
 
 requires = [
     'boost-1.61',
@@ -37,6 +37,7 @@ variants = [['platform-linux', 'arch-x86_64']]
 def commands():
     env.PYTHONPATH.append('{root}/lib/python')
     env.LD_LIBRARY_PATH.append('{root}/lib/')
+    env.PXR_USD_LOCATION.append('{root}')
     appendenv('PATH', '{root}/bin/')
 
 

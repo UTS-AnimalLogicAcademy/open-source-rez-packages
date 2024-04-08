@@ -3,7 +3,7 @@
 source version.sh
 
 rm v$VERSION.zip
-rm -rf USD-$VERSION
+rm -rf OpenUSD-$VERSION
 rm -rf build
 rm *.yml
 rm *.md

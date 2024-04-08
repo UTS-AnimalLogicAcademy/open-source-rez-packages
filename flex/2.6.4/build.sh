@@ -1,0 +1,17 @@
+#! /bin/bash
+
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages
+export PACKAGE_NAME=flex
+export PACKAGE_VERSION=2.6.4
+export MAKE_THREADS=28
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd flex-2.6.4
+./configure --prefix $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+make -j$MAKE_THREADS
+make install -j$MAKE_THREADS
+
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '19.11.3'
+version = '19.11.3
 
 requires = [
     'alembic-1.5',
@@ -18,7 +18,6 @@ requires = [
     'ptex-2.0',
     'PyOpenGL',
     'embree_lib',
-    'glew',
     'ocio-1.0.9'
 ]
 
@@ -31,8 +30,7 @@ private_build_requires = [
 ]
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'tbb-4.4.6'],
-            ['platform-linux', 'arch-x86_64', 'tbb-2017.0']
+            ['platform-linux', 'arch-x86_64', 'tbb-4.4.6']
 ]
 
 def commands():

@@ -1,0 +1,19 @@
+#! /usr/bin/bash
+
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages
+export PACKAGE_NAME=ptex
+export PACKAGE_VERSION=2.4.2
+export MAKE_THREADS=28
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd ptex-2.4.2
+make prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+make install -j$MAKE_THREADS
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+# this seems to be necessary, as USD looks for a lib64 dir regardless of $PACKAGE_NAME version
+ln -s $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/lib64 $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/lib
+
+

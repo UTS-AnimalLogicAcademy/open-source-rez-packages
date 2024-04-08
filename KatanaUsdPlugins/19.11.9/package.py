@@ -2,15 +2,17 @@
 
 name = 'KatanaUsdPlugins'
 
-version = '19.11.9'
+version = '19.11.9.2'
 
 private_build_requires = [
-    'cmake-3.12',
+    'cmake-3.12', 'devtoolset-9'
 ]
 
 variants = [
 #     ['platform-linux', 'arch-x86_64', 'katana-3.5'],
-     ['platform-linux', 'arch-x86_64', 'katana-4.5']
+#    ['platform-linux', 'arch-x86_64', 'katana-4.5'],
+#    ['platform-linux', 'arch-x86_64', 'katana-5'],
+    ['platform-linux', 'arch-x86_64', 'katana-6']
 ]
 
 def commands():

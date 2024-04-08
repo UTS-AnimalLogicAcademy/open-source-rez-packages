@@ -13,6 +13,8 @@ set_option(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}/USD-$ENV{VERSION})
 
 #set_option(PYTHON_LIBRARY $ENV{PYTHON_LIB_HOME}/libpython2.7.so)
 
+#set_option(BOOST_USE_STATIC_LIBS FALSE)
+
 set_option(BOOST_ROOT $ENV{REZ_BOOST_ROOT})
 
 set_option(TBB_ROOT_DIR $ENV{REZ_TBB_ROOT})
@@ -45,7 +47,5 @@ set_option(MAYA_LOCATION $ENV{MAYA_BASE_DIR})
 set_option(MAYA_tbb_LIBRARY $ENV{TBB_LIBRARIES}/libtbb.so)
 
 set_option(PXR_BUILD_MAYA_PLUGIN ON)
-
-set_option(BOOST_USE_STATIC_LIBS FALSE)
 
 add_subdirectory("USD-$ENV{VERSION}")

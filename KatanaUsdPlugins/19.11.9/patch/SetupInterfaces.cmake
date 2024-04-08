@@ -30,7 +30,7 @@ function(add_boost_interface)
         set(Boost_NAMESPACE Fnboost)
         set(Boost_USE_STATIC_LIBS OFF)
     endif()
-    find_package(Boost COMPONENTS python thread system regex REQUIRED)
+    find_package(Boost COMPONENTS filesystem python thread system regex REQUIRED)
 endfunction(add_boost_interface) #add_python_interface
 
 
@@ -45,7 +45,7 @@ function(add_python_interface)
         # the parent cmake files.
         if(UNIX)
             set(KATANA_PYTHON_INSTALL_PATH
-                ${KATANA_API_LOCATION}/bin/python2.7)
+                /opt/Foundry/Katana3.6v2/bin/python2.7)
             set(Python_EXECUTABLE
                     ${KATANA_PYTHON_INSTALL_PATH}/bin/python
                 PARENT_SCOPE)
@@ -158,7 +158,9 @@ function(add_usd_interface)
     elseif(USE_FOUNDRY_FIND_USD)
         find_package(USD REQUIRED)
     else()
-        find_package(GLEW CONFIG REQUIRED)
+        if(NOT TARGET GLEW::GLEW)
+            find_package(GLEW CONFIG REQUIRED)
+        endif()
         find_package(OpenEXR CONFIG REQUIRED)
         find_package(OpenImageIO CONFIG REQUIRED)
         find_package(OpenSubdiv REQUIRED)

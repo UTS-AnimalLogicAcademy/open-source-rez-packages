@@ -2,7 +2,7 @@
 
 mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$PACKAGE_VARIANT
 
-cd oiio-Release-1.8.5
+cd OpenImageIO-Release-1.8.5
 mkdir build
 cd build
 

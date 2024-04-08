@@ -7,6 +7,13 @@ unzip v$VERSION.zip
 
 mv USD-$VERSION/* .
 
-rm CMakeLists.txt
-cp patch/CMakeLists.txt .
+#Uncomment from here onwards when moving to python3
+#rm CMakeLists.txt
+#cp patch/CMakeLists.txt .
+
+#rm cmake/modules/FindTBB.cmake
+#cp patch/FindTBB.cmake cmake/modules/FindTBB.cmake
+
+#rm cmake/defaults/Options.cmake
+#cp patch/Options.cmake cmake/defaults/Options.cmake
 

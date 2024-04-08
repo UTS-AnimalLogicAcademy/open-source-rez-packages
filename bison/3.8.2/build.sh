@@ -1,0 +1,17 @@
+#! /bin/bash
+
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages
+export PACKAGE_NAME=bison
+export PACKAGE_VERSION=3.8.2
+export MAKE_THREADS=28
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd bison-3.8.2
+./configure --prefix $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+make -j$MAKE_THREADS
+make install -j$MAKE_THREADS
+
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

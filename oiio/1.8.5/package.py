@@ -2,20 +2,28 @@
 
 name = 'oiio'
 
-version = '1.8.5.3'
+version = '1.8.5.6'
 
 requires = [
-            'openexr',
+            'openexr-2',
             'ilmbase',
             'ocio',
-            'ffmpeg-3'
+            'ffmpeg-3',
+	    #'qt-5.15'
             ]
+
+build_requires = [
+	    'devtoolset-7'
+]
 
 variants = [
             ['platform-linux', 'arch-x86_64', 'boost-1.55'],
             ['platform-linux', 'arch-x86_64', 'boost-1.61'],
+	    ['platform-linux', 'arch-x86_64', 'boost-1.66'],
 	    ['platform-linux', 'arch-x86_64', 'boost-1.70'],
-	    ['platform-linux', 'arch-x86_64', 'boost-1.72']
+	    #['platform-linux', 'arch-x86_64', 'boost_katana-1.70'],
+	    ['platform-linux', 'arch-x86_64', 'boost-1.72'],
+	    ['platform-linux', 'arch-x86_64', 'boost-1.76']
            ]
 
 def commands():

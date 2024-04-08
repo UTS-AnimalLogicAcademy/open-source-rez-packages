@@ -1,0 +1,16 @@
+#! /bin/bash
+
+source version.sh
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd nasm-$VERSION
+
+./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+make -j$MAKE_THREADS
+
+make install -j$MAKE_THREADS
+
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

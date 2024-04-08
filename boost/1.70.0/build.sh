@@ -1,14 +1,14 @@
 #! /bin/bash
 
-export PACKAGE_INSTALLATION_ROOT=~/packages
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages
 export PACKAGE_NAME=boost
 export PACKAGE_VERSION=1.70.0
 
-mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+#export PYTHON_VERSION=python-2
+#rez-env python-2 -c ./_build_.sh
 
-cd boost_1_70_0
-./bootstrap.sh --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
-./b2 install
-cd ..
-cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+export PYTHON_VERSION=python-3.7
+rez-env python-3.7 -c ./_build_.sh
+
+#cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
 
