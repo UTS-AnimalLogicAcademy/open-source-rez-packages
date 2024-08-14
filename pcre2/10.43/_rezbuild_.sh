@@ -1,0 +1,15 @@
+#! /bin/bash
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd pcre2-10.43
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION -DBUILD_SHARED_LIBS=ON ..
+
+cmake --build .
+cmake --build . --target install
+
+cd ../..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

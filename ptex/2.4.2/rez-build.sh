@@ -1,3 +1,3 @@
 #! /usr/bin/bash
 
-rez env cmake-3.12 -c './build.sh'
+rez env cmake-3.12 devtoolset-11 -c './build.sh'

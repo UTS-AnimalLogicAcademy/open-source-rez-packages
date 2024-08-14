@@ -1,0 +1,16 @@
+#! /bin/bash
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd LibRaw-0.20.2
+
+autoreconf -f -i
+
+./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+make
+
+make install
+
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

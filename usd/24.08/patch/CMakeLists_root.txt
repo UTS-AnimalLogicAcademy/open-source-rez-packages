@@ -1,0 +1,149 @@
+cmake_minimum_required(VERSION 3.14)
+
+project(usd)
+
+if (NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+    if (WIN32)
+        message(FATAL_ERROR "Compiler does not support 64-bit builds. "
+                "If you are using Visual Studio, make sure you are in the "
+                "x64 command prompt and have specified the Win64 cmake "
+                "generator (e.g., -G \"Visual Studio 15 2017 Win64\")")
+    else()
+        message(FATAL_ERROR "Compiler does not support 64-bit builds.")
+    endif()
+endif()
+
+list(APPEND CMAKE_MODULE_PATH
+    ${PROJECT_SOURCE_DIR}/cmake/defaults
+    ${PROJECT_SOURCE_DIR}/cmake/modules
+    ${PROJECT_SOURCE_DIR}/cmake/macros)
+
+#================================================
+set(PXR_PY_UNDEFINED_DYNAMIC_LOOKUP OFF)
+
+#SET THIS IF BUILDING MONOLITHIC
+#set(PXR_BUILD_MONOLITHIC ON)
+
+# jemalloc
+#set(PXR_MALLOC_LIBRARY $ENV{REZ_JEMALLOC_ROOT}/lib/libjemalloc.so)
+
+#alembic plugin
+#set(ALEMBIC_DIR $ENV{REZ_ALEMBIC_ROOT})
+#set(ALEMBIC_LIBRARY_DIR $ENV{REZ_ALEMBIC_ROOT}/lib)
+#set(ALEMBIC_INCLUDE_DIR $ENV{REZ_ALEMBIC_ROOT}/include)
+set(PXR_BUILD_ALEMBIC_PLUGIN OFF)
+
+# boost
+#set(BOOST_ROOT $ENV{REZ_BOOST_ROOT})
+
+# tbb
+set(TBB_ROOT_DIR $ENV{REZ_TBB_ROOT})
+set(TBB_INCLUDE_DIR $ENV{REZ_TBB_ROOT}/include)
+set(TBB_LIBRARY $ENV{TBB_LIBRARIES})
+
+# openexr
+set(OPENEXR_LOCATION $ENV{REZ_OPENEXR_ROOT})
+set(OPENEXR_LIBRARY_DIR $ENV{REZ_OPENEXR_ROOT}/lib64)
+set(OPENEXR_INCLUDE_DIR $ENV{REZ_OPENEXR_ROOT}/include)
+
+# oiio
+set(OIIO_LIBRARIES
+$ENV{REZ_OIIO_ROOT}/lib64/libOpenImageIO.so
+$ENV{REZ_OIIO_ROOT}/lib64/libOpenImageIO_Util.so
+)
+set(OIIO_INCLUDE_DIR $ENV{REZ_OIIO_ROOT}/include)
+set(PXR_BUILD_OPENIMAGEIO_PLUGIN ON)
+
+# opensubdiv
+set(OPENSUBDIV_INCLUDE_DIR $ENV{REZ_OPENSUBDIV_ROOT}/include)
+set(OPENSUBDIV_LIBRARIES
+$ENV{REZ_OPENSUBDIV_ROOT}/lib/libosdCPU.so
+$ENV{REZ_OPENSUBDIV_ROOT}/lib/libosdGPU.so
+)
+
+# ptex
+set(PTEX_LOCATION $ENV{REZ_PTEX_ROOT})
+set(PTEX_INCLUDE_DIR $ENV{REZ_PTEX_ROOT}/include)
+set(PTEX_LIBRARY $ENV{REZ_PTEX_ROOT}/lib64/libPtex.so)
+set(PXR_ENABLE_PTEX_SUPPORT ON)
+
+# embree
+#set(EMBREE_LOCATION $ENV{REZ_EMBREE_LIB_ROOT})
+#set(PXR_BUILD_EMBREE_PLUGIN OFF)
+
+#set(PXR_BUILD_MATERIALX_PLUGIN OFF)
+
+# renderman
+set(RENDERMAN_LOCATION $ENV{RMANTREE})
+set(PXR_BUILD_PRMAN_PLUGIN ON)
+
+# glew
+set(GLEW_LOCATION $ENV{REZ_GLEW_ROOT})
+
+# open color io
+set(OCIO_INCLUDE_DIRS $ENV{REZ_OCIO_ROOT}/include)
+set(OCIO_LIBRARIES $ENV{REZ_OCIO_ROOT}/lib64/libOpenColorIO.so)
+set(OCIO_LOCATION $ENV{REZ_OCIO_ROOT})
+
+set(PXR_BUILD_OPENCOLORIO_PLUGIN ON)
+
+set(PXR_ENABLE_OPENVDB_SUPPORT ON)
+set(PXR_ENABLE_OSL_SUPPORT ON)
+#================================================
+
+include(Options)
+include(ProjectDefaults)
+include(Packages)
+
+# This has to be defined after Packages is included, because it relies on the
+# discovered path to the python executable.
+set(PXR_PYTHON_SHEBANG "${PYTHON_EXECUTABLE}" 
+    CACHE 
+    STRING
+    "Replacement path for Python #! line."
+)
+
+# CXXDefaults will set a variety of variables for the project.
+# Consume them here. This is an effort to keep the most common
+# build files readable.
+include(CXXDefaults)
+add_definitions(${_PXR_CXX_DEFINITIONS})
+set(CMAKE_CXX_FLAGS "${_PXR_CXX_FLAGS} -D_GLIBCXX_USE_CXX11_ABI=0 ${CMAKE_CXX_FLAGS}")
+#set(_GLIBCXX_USE_CXX11_ABI 0)
+set (CMAKE_CXX_STANDARD 17)
+
+include(Public)
+
+pxr_toplevel_prologue()
+
+add_subdirectory(pxr)
+add_subdirectory(extras)
+
+if (PXR_BUILD_PRMAN_PLUGIN)
+    set(prmanPluginPath "third_party/renderman-${RENDERMAN_VERSION_MAJOR}")
+
+    get_filename_component(prmanPluginAbsPath "${prmanPluginPath}" ABSOLUTE)
+    if (EXISTS "${prmanPluginAbsPath}")
+        add_subdirectory("${prmanPluginPath}")
+    else()
+        message(FATAL_ERROR "No RenderMan plugin available for "
+                "RenderMan ${RENDERMAN_VERSION_MAJOR}")
+    endif()
+endif()
+
+if (PXR_BUILD_TESTS)
+    pxr_tests_prologue()
+endif()
+
+if (PXR_BUILD_DOCUMENTATION)
+    pxr_build_documentation()
+endif()   
+
+# If building python doc strings, run script
+# that uses doxygen build results and installed
+# USD python modules
+if (PXR_BUILD_PYTHON_DOCUMENTATION)
+    pxr_build_python_documentation()
+endif()
+
+pxr_toplevel_epilogue()

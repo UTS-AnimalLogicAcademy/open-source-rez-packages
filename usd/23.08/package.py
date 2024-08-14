@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '23.08.5'
+version = '23.08.6'
 
 requires = [
     'opensubdiv-3.5',

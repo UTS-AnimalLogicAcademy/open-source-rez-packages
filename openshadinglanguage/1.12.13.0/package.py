@@ -2,9 +2,9 @@
 
 name = 'openshadinglanguage'
 
-version = '1.12.13.0'
+version = '1.12.13.1'
 
-private_build_requires = ['cmake-3.16', 'devtoolset-9']
+private_build_requires = ['cmake-3.16', 'devtoolset-9+']
 
 requires = [
             'oiio-2.4',
@@ -15,7 +15,8 @@ requires = [
 	    'python-3.10',
 	    'flex',
 	    'bison',
-	    'pugixml'
+	    'pugixml',
+            'os-RedHatEnterprise-8+'
             ]
 
 #variants = [['platform-linux', 'arch-x86_64']]

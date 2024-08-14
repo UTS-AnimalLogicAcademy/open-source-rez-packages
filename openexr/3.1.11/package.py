@@ -4,7 +4,7 @@ name = 'openexr'
 
 version = '3.1.11'
 
-build_requires = [
+private_build_requires = [
             'cmake-3.16', 'devtoolset-9'
            ]
 
@@ -17,6 +17,7 @@ def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64/')
     appendenv('PKG_CONFIG_PATH', '{root}/lib64/pkgconfig/')
     setenv('OPENEXR_ROOT', '{root}')
+    setenv('OPENEXR_ROOT_DIR', '{root}')
     setenv('OpenEXR_DIR', '{root}')
 
 

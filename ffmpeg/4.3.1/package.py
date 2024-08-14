@@ -2,9 +2,11 @@
 
 name = 'ffmpeg'
 
-version = '4.3.1'
+version = '4.3.1.1'
 
 variants = [['platform-linux', 'arch-x86_64']]
+
+requires = ['os-RedHatEnterprise-8.10+']
 
 def commands():
     env.PATH.append('{this.root}/bin')

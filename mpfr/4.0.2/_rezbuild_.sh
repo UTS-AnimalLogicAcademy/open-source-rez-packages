@@ -1,0 +1,16 @@
+#! /bin/bash
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd mpfr-4.0.2
+
+./configure --with-gmp=$GMP_DIR --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+make 
+
+VERBOSE=1 make check
+
+make install 
+
+cd ..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

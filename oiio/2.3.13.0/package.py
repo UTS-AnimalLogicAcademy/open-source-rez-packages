@@ -2,7 +2,7 @@
 
 name = 'oiio'
 
-version = '2.3.13.1'
+version = '2.3.13.3'
 
 private_build_requires = ['cmake-3.16', 'devtoolset-7+']
 
@@ -19,7 +19,7 @@ requires = [
             #'openjpeg'
             ]
 
-variants = [['boost_katana-1.76','tbb_katana-2020.3','!boost', '!tbb'],['boost-1.76','tbb-2020.3', 'nuke-14.1']]
+variants = [['boost_katana-1.76','tbb_katana-2020.3','qt-5.15.2','!boost', '!tbb'],['boost-1.76','tbb-2020.3','qt-5.15.2', 'nuke-14.1']]
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64/')

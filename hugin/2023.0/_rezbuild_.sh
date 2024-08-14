@@ -1,0 +1,15 @@
+#! /bin/bash
+
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+cd hugin-2023.0.0
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION -DVIGRA_ROOT_PATH=$REZ_VIGRA_ROOT ..
+
+cmake --build .
+cmake --build . --target install
+
+cd ../..
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$VARIANT/lib/python3.9/site-packages
+mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$VARIANT/lib/python3.11/site-packages
 
 cd pybind11-2.9.1
 

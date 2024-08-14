@@ -1,8 +1,8 @@
 #! /bin/bash
 
-export PACKAGE_INSTALLATION_ROOT=~/packages
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages #~/packages
 export PACKAGE_NAME=ffmpeg
-export PACKAGE_VERSION=4.3.1
+export PACKAGE_VERSION=4.3.1.1
 export PACKAGE_VARIANT=platform-linux/arch-x86_64
 export MAKE_THREADS=28
 
@@ -14,6 +14,6 @@ cd FFmpeg-n4.3.1
 make -j$MAKE_THREADS
 make install -j$MAKE_THREADS
 cd ..
-cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/$PACKAGE_VARIANT
+cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
 
 

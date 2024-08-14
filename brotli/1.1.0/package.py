@@ -10,5 +10,6 @@ def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64/')
     appendenv('LIBRARY_PATH', '{root}/lib64/')
     appendenv('PATH', '{root}/bin/')
+    setenv('Brotli_ROOT', '{root}')
 
 
