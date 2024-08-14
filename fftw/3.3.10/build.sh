@@ -8,13 +8,10 @@ export PACKAGE_NAME=fftw
 export PACKAGE_VERSION=$VERSION
 export MAKE_THREADS=28
 
-mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
-
-cd fftw-$VERSION
-./configure --prefix=$PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION --enable-shared
-make -j$MAKE_THREADS
-make install -j$MAKE_THREADS
-
-cd ..
-
+rez-env cmake-3 devtoolset-7+ -c './_rezbuild_.sh'
 cp package.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
+
+export PACKAGE_NAME=fftwf
+
+rez-env cmake-3 devtoolset-7+ -c './_rezbuild_float.sh'
+cp package_float.py $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION/package.py
