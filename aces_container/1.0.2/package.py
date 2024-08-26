@@ -2,9 +2,11 @@
 
 name = 'aces_container'
 
-version = '1.0.2'
+version = '1.0.3'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
+
+requires = ['os-RedHatEnterprise-8.10+']
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib')

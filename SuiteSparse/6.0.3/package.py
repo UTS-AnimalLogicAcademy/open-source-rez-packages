@@ -2,11 +2,11 @@
 
 name = 'SuiteSparse'
 
-version = '6.0.3'
+version = '6.0.3.1'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
 
-requires = ['openblas', 'mpfr-4.0.2']
+requires = ['openblas', 'mpfr-4.0.2', 'os-RedHatEnterprise-8.10+']
 
 def commands():
     setenv('SuiteSparse_ROOT', '{root}')

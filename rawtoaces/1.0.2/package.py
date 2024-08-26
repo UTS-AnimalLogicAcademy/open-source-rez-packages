@@ -2,7 +2,7 @@
 
 name = 'rawtoaces'
 
-version = '1.0.2'
+version = '1.0.3'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
 
