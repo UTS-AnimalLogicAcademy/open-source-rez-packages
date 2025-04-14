@@ -2,7 +2,7 @@
 
 name = 'usd'
 
-version = '19.11.3
+version = '19.11.3'
 
 requires = [
     'alembic-1.5',
