@@ -2,7 +2,7 @@
 
 export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages #~/packages
 export PACKAGE_NAME=ffmpeg
-export PACKAGE_VERSION=4.3.1.1
+export PACKAGE_VERSION=4.3.1.2
 export PACKAGE_VARIANT=platform-linux/arch-x86_64
 export MAKE_THREADS=28
 

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-export PACKAGE_INSTALLATION_ROOT=~/packages
+export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages #~/packages
 export PACKAGE_NAME=pyside2
 export PACKAGE_VERSION=5.15.2.1
 export MAKE_THREADS=28

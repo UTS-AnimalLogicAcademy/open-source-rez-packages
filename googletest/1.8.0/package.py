@@ -10,7 +10,7 @@ version = '1.8.0'
 
 #variants = [['platform-linux', 'arch-x86_64']]
 
-build_requires = ['cmake-3.2']
+build_requires = ['cmake-3']
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib/')

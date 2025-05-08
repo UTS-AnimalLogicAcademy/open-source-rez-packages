@@ -2,7 +2,7 @@
 
 name = 'oiio'
 
-version = '2.4.17.3'
+version = '2.4.17.4'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
 
@@ -19,7 +19,7 @@ requires = [
             'pybind11',
 	    #'libjpegturbo',
             'openjpeg',
-            'os-RedHatEnterprise-8+'
+            'os-RedHatEnterprise-9+'
             ]
 
 #variants = [['platform-linux', 'arch-x86_64']]

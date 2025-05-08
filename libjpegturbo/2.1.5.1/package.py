@@ -2,9 +2,11 @@
 
 name = 'libjpegturbo'
 
-version = '2.1.5.1'
+version = '2.1.5.1.1'
 
 build_requires = ['cmake-3.16', 'devtoolset-9']
+
+requires = ['os-RedHatEnterprise-9+']
 
 #variants = [['platform-linux', 'arch-x86_64']]
 

@@ -2,7 +2,9 @@
 
 name = 'ffmpeg'
 
-version = '6.0.0'
+version = '6.0.1.1'
+
+requires = ['os-RedHatEnterprise-9+']
 
 variants = [['platform-linux', 'arch-x86_64']]
 

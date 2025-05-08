@@ -2,13 +2,13 @@
 
 name = 'openexr'
 
-version = '3.1.11'
+version = '3.1.11.1'
 
 private_build_requires = [
             'cmake-3.16', 'devtoolset-9'
            ]
 
-requires=['Imath']
+requires=['Imath','os-RedHatEnterprise-8+']
 
 variants = [['platform-linux', 'arch-x86_64']]
 

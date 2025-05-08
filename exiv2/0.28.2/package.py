@@ -2,11 +2,11 @@
 
 name = 'exiv2'
 
-version = '0.28.2'
+version = '0.28.2.1'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
 
-requires = ['python-3', 'brotli']
+requires = ['python-3', 'brotli', 'inih', 'os-RedHatEnterprise-9+']
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64')

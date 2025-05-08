@@ -2,11 +2,13 @@
 
 name = 'rawtoaces'
 
-version = '1.0.3'
+version = '1.0.4'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
 
-requires = ['boost-1.80','aces_container','openexr', 'ceres_solver']
+build_requires = ['python-3.11']
+
+requires = ['boost-1.82','aces_container','openexr', 'ceres_solver', 'os-RedHatEnterprise-9+']
 
 tools = ['rawtoaces']
 

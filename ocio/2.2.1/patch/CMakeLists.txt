@@ -14,6 +14,14 @@ set(CMAKE_MODULE_PATH
     ${CMAKE_SOURCE_DIR}/share/cmake/modules
 )
 
+set(CMAKE_PREFIX_PATH
+    ${CMAKE_PREFIX_PATH}
+    ${REZ_PYTHON_ROOT}/miniconda3
+)
+
+set(Python_EXECUTABLE $ENV{REZ_PYTHON_ROOT}/miniconda3/bin/python3)
+set(Python_LIBRARIES $ENV{REZ_PYTHON_ROOT}/miniconda3/lib/libpython3.10.so)
+
 set(CMAKE_WARN_DEPRECATED ON)
 
 

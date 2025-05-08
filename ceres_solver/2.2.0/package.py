@@ -2,11 +2,11 @@
 
 name = 'ceres_solver'
 
-version = '2.2.0.1'
+version = '2.2.0.2'
 
 private_build_requires = ['cmake-3', 'devtoolset-7+']
 
-requires = ['eigen-3.3', 'glog-0.4','SuiteSparse', 'os-RedHatEnterprise-8.10+']
+requires = ['eigen-3.3', 'glog-0.4','SuiteSparse', 'os-RedHatEnterprise-9+']
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib64')

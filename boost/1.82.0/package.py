@@ -2,9 +2,11 @@
 
 name = 'boost'
 
-version = '1.82.0.1'
+version = '1.82.0.2'
 
-build_requires = ['python-3.11', 'devtoolset']
+build_requires = ['python-3.10', 'devtoolset']
+
+requires = ['os-RedHatEnterprise-9+']
 
 def commands():
     appendenv('LD_LIBRARY_PATH', '{root}/lib/')

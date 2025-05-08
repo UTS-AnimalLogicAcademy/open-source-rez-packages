@@ -2,14 +2,14 @@
 
 name = 'usd'
 
-version = '23.11.0'
+version = '23.11.1'
 
 requires = [
     'opensubdiv-3.6',
     'jinja-3',
     'jemalloc-4',
     'openexr-3.2',
-    'materialx-1.38.8',
+    'materialx-1.38.8.2',
     'ptex-2.4',
     'PyOpenGL',
     'alembic-1.8',

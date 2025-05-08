@@ -2,7 +2,7 @@
 
 export PACKAGE_INSTALLATION_ROOT=/mnt/ala/software/ext_packages
 export PACKAGE_NAME=boost
-export PACKAGE_VERSION=1.82.0.1
+export PACKAGE_VERSION=1.82.0.2
 
 mkdir -p $PACKAGE_INSTALLATION_ROOT/$PACKAGE_NAME/$PACKAGE_VERSION
 
